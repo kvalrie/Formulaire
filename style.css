@@ -4,9 +4,7 @@
 	background-size: 100%;
 	text-align: center;
 	color: white;
-
-
-	
+	font-family: nexaheavy, sans-serif ;
 }
 #showcase .content h1 {
 
@@ -18,12 +16,8 @@ margin-left:auto;
 margin-right: auto;
 width: 600px;
 
-}
-.form ol {
-	list-style-type: none;
-}
-input 
 
+}
 }
 
 

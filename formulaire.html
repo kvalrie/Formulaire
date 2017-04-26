@@ -2,17 +2,19 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>formulaire</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 </head>
 <body>
 <section id="showcase">
 		<div class="content">
 			<h1>Bienvenue dans l'assistance de Hackers Poulette!</h1>
-			<p>Nous avons une solution a votre probleme</p>
-			<select id="menu" name="menu">
+			<h2>Nous avons une solution a votre probleme</h2>
+				<select id="menu" name="menu">
   						<option value="" selected>Votre demande</option>
 
 						<option value="info">Information General</option>
@@ -22,22 +24,29 @@
   						<option value="Other">Autre</option>
 				</select>
 		</div>
-		
 </section>
 
 <section class="form">
 		<form action="mon-formulaire" method="post" class="pure-form pure-form-aligned">
-    		<ol>
-    			<li class="pure-control-group">
+    
+    		<div class="pure-control-group">
+    		<!--name + value -->
+				<label></label>
     			<input type="radio" name="gender" value="Mr">Mr.
     			<input type="radio" name="gender" value="Mrs">Mrs.
     			<input type="radio" name="gender" value="Mlle">Mlle.
-    			</li>
-    			<li class="pure-control-group"><label for="prénom">Prénom:</label>
-        		<input type="text" id="prénom" /></li>
-    			<li class="pure-control-group"><label for="nom">Nom:</label>
-        		<input type="text" id="nom" /></li>
-    			<li class="pure-control-group"><label for="pays">Pays </label>
+
+    		</div>
+    		<div class="pure-control-group">
+        		<label for="prénom">Prénom:</label>
+        		<input type="text" id="prénom" required/>
+    		</div>
+    		<div class="pure-control-group">
+        		<label for="nom">Nom:</label>
+        		<input type="text" id="nom" />
+    		</div>
+    		<div class="pure-control-group">
+ 		<label for="pays">Pays </label>
  		<select> 
 
 		<option value="AF">Afghanistan</option>
@@ -290,29 +299,28 @@
 		<option value="ZM">Zambia</option>
 		<option value="ZW">Zimbabwe</option>
 
- 		</select></li>
-    			<li class="pure-control-group">
-    				<label for="email">E-mail:</label>
-        			<input type="text" id="email" />
-        		</li>
-    			<li class="pure-control-group">
-    				<label for="objet">Objet:</label>
-        			<input type="text" id="objet" />
-        		</li>
-        		<li class="pure-control-group">
-        			<label for="description">Description:</label>
-        			<textarea id="description">Décrivez le probleme ou partagez vos idées</textarea>
-        		</li>
-        		<li class="pure-control-group">
-        		<div class="form-field">
-        		<div id="upload-dropzone" class="upload-dropzone">
-    				<label for="upload-dropzone">Pieces-jointes:</label>
-  					<input type="file" multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" data-error="upload-error" data-create-url="/hc/en-us/request_uploads" data-name="request[attachments][]" data-pool="request-attachments-pool" data-delete-confirm-msg="">
-  				
-			</div></li>
+ 		</select>
+ 	</div>
+    		<div class="pure-control-group" >
+           		<label for="email">E-mail:</label>
+        		<input type="text" id="email" />
+    		</div>
+    		<div class="pure-control-group">
+        		<label for="objet">Objet:</label>
+        		<input type="text" id="objet" />
+    		</div>
+			<div class="pure-control-group">
+        		<label for="description">Description:</label>
+        		<textarea id="description">Décrivez le probleme ou partagez vos idées</textarea>
+    		</div>
+    		<div id="upload-dropzone" class="pure-control-group">
+    			<label for="upload-dropzone">Pieces-jointes:</label>
+  				<input type="file" multiple="true" id="request-attachments" data-fileupload="true" data-dropzone="upload-dropzone" data-error="upload-error" data-create-url="/hc/en-us/request_uploads" data-name="request[attachments][]" data-pool="request-attachments-pool" data-delete-confirm-msg="">
+  			
+			</div>
 			
-    		</ol>
-    		
+	
+		</form>
 
 
 
